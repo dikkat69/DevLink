@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "start": "node Src/app.js",
-    "dev": "nodemon Src/app.js"
+    "dev": "nodemon Src/app.js",
+    "seed": "node seed.js",
+    "seed:reset": "node seed.js --force-wipe-db"
   },
   "keywords": [
     "Namaste",
@@ -22,6 +24,7 @@
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.5",
+    "socket.io": "^4.8.3",
     "validator": "^13.15.26"
   }
 }

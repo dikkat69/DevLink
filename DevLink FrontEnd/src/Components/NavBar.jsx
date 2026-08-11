@@ -89,6 +89,15 @@ const NavBar = () => {
               </li>
 
               <li>
+                <Link
+                  to="/chat"
+                  className="hover:bg-white/10 rounded-lg"
+                >
+                  Chat
+                </Link>
+              </li>
+
+              <li>
                 <button
                   onClick={handleLogout}
                   className="text-red-400 hover:bg-red-500/10 rounded-lg"

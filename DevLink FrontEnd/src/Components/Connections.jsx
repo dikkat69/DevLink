@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionSlice";
+import { Link } from "react-router-dom";
+import { MessageSquare } from "lucide-react";
 
 const Connections = () => {
   const connections = useSelector((store) => store.connections);
@@ -89,6 +91,13 @@ const Connections = () => {
                 <p className="mt-3 text-sm text-gray-300">
                   {about || "This user has no bio yet."}
                 </p>
+
+                <Link
+                  to={`/chat/${_id}`}
+                  className="mt-6 w-full py-2.5 px-4 rounded-xl bg-linear-to-r from-pink-500 to-purple-600 text-white font-semibold hover:scale-105 transition shadow-lg shadow-pink-500/20 text-center flex items-center justify-center gap-2"
+                >
+                  <MessageSquare className="w-4 h-4" /> Chat
+                </Link>
 
               </div>
             </div>
