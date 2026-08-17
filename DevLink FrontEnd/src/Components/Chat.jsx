@@ -45,7 +45,7 @@ const Chat = () => {
         setLoading(false);
 
         // 2. Establish Socket connection ONLY after success
-        const socketInstance = io(BASE_URL, {
+        const socketInstance = io(window.location.origin, {
           withCredentials: true,
           transports: ["websocket", "polling"],
         });
